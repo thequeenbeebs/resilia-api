@@ -4,4 +4,9 @@ class NotificationsController < ApplicationController
         notifications = Notification.select{ | n | n.user_id  == user.id }
         render json: notifications
     end
+
+    def destroy
+        notification = Notification.find(params[:id])
+        notification.delete
+    end
 end
