@@ -12,8 +12,8 @@ User.destroy_all
 blaire = User.create(name: "Blaire")
 dinesh = User.create(name: "Dinesh")
 
-Notification.create(user_id: blaire.id, message: "Microgrant applications are now open.")
-Notification.create(user_id: blaire.id, message: "Congratulations! You have recieved tax exempt status.")
-Notification.create(user_id: blaire.id, message: "It is time to refile for your tax exempt status.")
-Notification.create(user_id: blaire.id, message: "You have a new message.")
-Notification.create(user_id: dinesh.id, message: "You are currently 30% complete with your Resilia Academy course.")
+Notification.create(user_id: dinesh.id, message: "Microgrant applications are now open.")
+Notification.create(user_id: dinesh.id, message: "Congratulations! You have recieved tax exempt status.")
+Notification.create(user_id: dinesh.id, message: "It is time to refile for your tax exempt status.")
+Notification.create(user_id: dinesh.id, message: "You have a new message.")
+Notification.create(user_id: blaire.id, message: "You are currently 30% complete with your Resilia Academy course.")
