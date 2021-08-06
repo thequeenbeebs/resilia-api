@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_notifications
   resources :users
   post '/notifications', to: "notifications#index"
   delete '/notifications/:id', to: "notifications#destroy"

@@ -6,6 +6,8 @@ class NotificationsController < ApplicationController
     end
 
     def destroy
+        # UserNotification 
+        # UserNotification.find(params(:id))
         notification = Notification.find(params[:id])
         notification.delete
     end
