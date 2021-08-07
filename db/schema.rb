@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_08_06_232539) do
   end
 
   create_table "user_notifications", force: :cascade do |t|
-    t.integer "used_id"
+    t.integer "user_id"
     t.integer "notification_id"
   end
 

@@ -8,12 +8,22 @@
 
 Notification.destroy_all
 User.destroy_all
+UserNotification.destroy_all
 
-blaire = User.create(name: "Blaire")
-dinesh = User.create(name: "Dinesh")
+blaire = User.create(name: "Blaire", email_address: "blaire@blaire.com", organization: "BC/EFA")
+dinesh = User.create(name: "Dinesh", email_address: "dinesh@dinesh.com", organization: "American Cancer Society")
 
-Notification.create(user_id: dinesh.id, message: "Microgrant applications are now open.")
-Notification.create(user_id: dinesh.id, message: "Congratulations! You have recieved tax exempt status.")
-Notification.create(user_id: dinesh.id, message: "It is time to refile for your tax exempt status.")
-Notification.create(user_id: dinesh.id, message: "You have a new message.")
-Notification.create(user_id: blaire.id, message: "You are currently 30% complete with your Resilia Academy course.")
+microgrant = Notification.create(message: "Microgrant applications are now open.")
+congrats = Notification.create(message: "Congratulations! You have recieved tax exempt status.")
+refile = Notification.create(message: "It is time to refile for your tax exempt status.")
+message = Notification.create(message: "You have a new message.")
+academy = Notification.create(message: "You are currently 30% complete with your Resilia Academy course.")
+
+UserNotification.create(user_id: dinesh.id, notification_id: microgrant.id)
+UserNotification.create(user_id: dinesh.id, notification_id: congrats.id)
+UserNotification.create(user_id: dinesh.id, notification_id: refile.id)
+UserNotification.create(user_id: blaire.id, notification_id: refile.id)
+UserNotification.create(user_id: blaire.id, notification_id: message.id)
+UserNotification.create(user_id: blaire.id, notification_id: academy.id)
+
+
